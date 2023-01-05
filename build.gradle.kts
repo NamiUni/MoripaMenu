@@ -19,6 +19,9 @@ repositories {
 
     // Corn
     maven("https://repo.broccol.ai")
+
+    // Papi
+    maven("https://repo.extendedclip.com/content/repositories/placeholderapi/")
 }
 
 dependencies {
@@ -35,6 +38,9 @@ dependencies {
     // inventory gui
     implementation("org.incendo.interfaces", "interfaces-paper", "1.0.0-SNAPSHOT")
 
+    // PlaceholderAPI
+    compileOnly("me.clip", "placeholderapi", "2.11.2")
+
     // Utils
     implementation("com.google.inject", "guice", "5.1.0")
 }
@@ -47,6 +53,13 @@ bukkit {
     description = "もりぱ専用メニュープラグイン"
     author = "Unitarou"
     website = "https://morino.party"
+    depend = listOf("PlaceholderAPI")
+    commands {
+        register("menu") {
+            description = "メニューコマンド"
+            usage = "/menu"
+        }
+    }
 }
 
 tasks {

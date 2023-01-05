@@ -7,9 +7,6 @@ import org.incendo.interfaces.paper.PlayerViewer;
 import party.morino.moripamenu.gui.MainMenuInterface;
 
 public class MenuOpenListener implements Listener {
-
-
-
     @EventHandler
     public void onSwap(PlayerSwapHandItemsEvent event) {
         if (event.getPlayer().isSneaking()) {
